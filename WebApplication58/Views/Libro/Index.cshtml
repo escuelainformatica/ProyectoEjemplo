@@ -1,0 +1,29 @@
+﻿@model List<Libro>
+
+<table  class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>titulo</th>
+            <th>stock</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+    <t/head>
+    @foreach(var libro in Model) {
+    <tr>
+        <td>@libro.Id</td>
+        <td>@libro.Titulo</td>
+        <td>@libro.Stock</td>
+        <td><a class="btn btn-primary" href='/libro/librovender/@libro.Id'>Vender este libro</a></td>
+        <td><a class="btn btn-primary" href='/libro/libroaumento/@libro.Id'>Aumentar el stock</a></td>
+    </tr>
+    }
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>@ViewBag.total</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

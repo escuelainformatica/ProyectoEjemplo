@@ -1,0 +1,9 @@
+﻿@model Libro
+<h1>El libro que se quiere aumentar el stock es @Model.Titulo </h1></br>
+
+<form method='post'>
+    <input type='hidden' name='id' value='@Model.Id'/>
+    aumento de stock:<input type='text' name='stockadicional' value='0'/></br>
+    <input type='submit'>
+</form>
+

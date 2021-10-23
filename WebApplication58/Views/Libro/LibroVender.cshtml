@@ -1,0 +1,16 @@
+﻿
+
+<h1>Aqui deberia vender el libro #@ViewBag.libro.Titulo</h1>
+
+@if(ViewBag.stockdisponible<=0) {
+    <h2>No hay stock disponible</h2>
+} else {
+    <form method="post">
+        <input type='hidden' name='campo1' value='@ViewBag.libro.Id'/>
+        <input type='submit' value="Vender un libro"/>
+    </form>
+}
+
+@if(ViewBag.falla!=null) {
+    <div class='alert'>No se pudo realizar la venta</div>
+}
